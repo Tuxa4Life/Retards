@@ -1,0 +1,2 @@
+# Retards
+Retarded squad only
