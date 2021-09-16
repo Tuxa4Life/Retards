@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/navbar.css">
+    <link rel="stylesheet" href="assets/styles/register.css">
+    <link rel="shortcut icon" href="assets/images/logo-light-transp.png">
+    <title>Register</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-b">
+            <ul>
+                <li><p class="nav-quicklink"><a href="assets.html">Assets</a></p></li>
+                <li><a href="index.html"><img class="logo-img" src="assets/images/logo-light-transp.png" alt="HWH"></a></li>
+                <li><p class="nav-quicklink"><a href="soon.html">Chats</a></p></li>
+            </ul>
+        </div>
+        <div class="nav-s">
+            <div class="menu-holder">
+                <img class="sidebarBtn1" src="assets/icons/cog.svg" alt="Menu">
+            </div>
+            <div class="title-holder">
+                <h1><a href="index.html">HWH</a></h1>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="closer-holder">
+                <img class="sidebarBtn2" src="assets/icons/cog.svg" alt="Menu">
+            </div>
+            <div class="content-holder">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assets.html">Assets</a></li>
+                    <li><a href="soon.html">Chats</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-background">
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Register Form</h1>
+            <div class="inputs">
+                <div class="input-holder">
+                    <div class="label-holder">
+                        <label for="name"> Name</label>
+                        <img class="qm" title="Nickname is also Valid" src="assets/icons/question.svg" alt="">
+                    </div>
+                    <input class="ni" type="text" name="name">
+                </div>
+                <div class="input-holder">
+                    <label for="email"> Email</label>
+                    <input class="ei" type="email" name="email">
+                </div>
+                <div class="input-holder">
+                    <div class="label-holder">
+                        <label for="password"> Password</label>
+                        <img class="qm" title="Needs to be at Least 8 Characters. Max 20" src="assets/icons/question.svg" alt="/?/">
+                    </div>
+                    <div>
+                        <input class="pi passwordInput" type="password" name="password" > 
+                        <img class="eye" src="assets/icons/eye.svg" alt="">
+                    </div>
+                </div>
+                <div class="input-holder">
+                    <label for="password">Repeat your Password</label>
+                    <input class="rpi" type="password" name="password" >
+                </div>
+
+                <div class="button-holder">
+                    <button class="regBtn">Register</button>
+                    <a href="index.html">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+</html>

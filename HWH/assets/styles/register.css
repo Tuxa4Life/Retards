@@ -1,0 +1,152 @@
+main {
+  width: 100%;
+  height: 90vh;
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container {
+  background: #2F2F2F;
+  height: 80%;
+  width: 60%;
+  border: 1px #121212 solid;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 660px) {
+  main .container {
+    width: 90%;
+  }
+}
+
+main .container .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 70%;
+  width: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 660px) {
+  main .container .inputs {
+    width: 90%;
+  }
+}
+
+main .container .inputs .input-holder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container .inputs .input-holder .label-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .inputs .input-holder .label-holder .qm {
+  width: 10px;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+          filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+  margin-left: 5px;
+  cursor: help;
+}
+
+@media (max-width: 660px) {
+  main .container .inputs .input-holder .label-holder .qm {
+    display: none;
+  }
+}
+
+main .container .inputs .input-holder input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px #121212 solid;
+  color: #E0E0E0;
+  outline: none;
+  font-size: 20px;
+  width: 80%;
+}
+
+main .container .inputs .input-holder div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .inputs .input-holder div img {
+  width: 20px;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+          filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+  margin-left: 10px;
+}
+
+main .container .inputs .button-holder {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 660px) {
+  main .container .inputs .button-holder {
+    width: 80%;
+  }
+}
+
+main .container .inputs .button-holder button {
+  width: 70px;
+  height: 25px;
+  background: #424242;
+  color: #E0E0E0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=register.css.map */

@@ -1,0 +1,325 @@
+.light {
+  background: #F0F2F5;
+}
+
+.light .card, .light .post {
+  background: #d6d6d6 !important;
+}
+
+.light p, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light span, .light li, .light a, .light textarea {
+  color: black !important;
+}
+
+.light img {
+  -webkit-filter: invert(0%) sepia(94%) saturate(0%) hue-rotate(231deg) brightness(105%) contrast(106%) !important;
+          filter: invert(0%) sepia(94%) saturate(0%) hue-rotate(231deg) brightness(105%) contrast(106%) !important;
+}
+
+.light .nav-b, .light .nav-s {
+  background: #FFFFFF !important;
+  -webkit-box-shadow: 1px 6px 23px -9px #000000 !important;
+  box-shadow: 1px 6px 23px -9px #000000 !important;
+}
+
+.light .sidebar {
+  background: #d6d6d6;
+}
+
+.tBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.themeMenu {
+  width: 280px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #2F2F2F;
+  border: 2px #121212 solid;
+  border-radius: 10px;
+  position: relative;
+}
+
+.themeMenu .tinput-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40%;
+  height: 25px;
+  background: #424242;
+  border: 1px #121212;
+  border-radius: 10px;
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+.themeMenu .tinput-holder label, .themeMenu .tinput-holder input {
+  cursor: pointer;
+}
+
+.themeMenu .buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.themeMenu .buttons button {
+  width: 70px;
+  height: 25px;
+  background: #424242;
+  color: #E0E0E0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.pBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profileMenu {
+  width: 350px;
+  height: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #2F2F2F;
+  border: 2px #121212 solid;
+  border-radius: 10px;
+}
+
+.profileMenu label {
+  width: 60%;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.profileMenu input {
+  width: 60%;
+  background: #2F2F2F;
+  border: none;
+  border-bottom: 1px #121212 solid;
+  color: #E0E0E0;
+  font-size: 16px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.profileMenu .btn-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profileMenu .btn-holder button {
+  width: 70px;
+  height: 30px;
+  margin-top: 20px;
+  background: #424242;
+  color: #E0E0E0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.profileMenu .btn-holder .cancelButton {
+  background: #424242;
+}
+
+.profileMenu span {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.profileMenu span a {
+  text-decoration: underline;
+}
+
+.logginedMenu {
+  width: 350px;
+  height: 270px;
+  background: #2F2F2F;
+  border: 2px #121212 solid;
+  border-radius: 10px;
+  position: relative;
+}
+
+.logginedMenu .info {
+  margin: 10% 0 0 5%;
+}
+
+.logginedMenu .info h6 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.logginedMenu .deleteAcc {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.logginedMenu .buttons {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+.logginedMenu .buttons button {
+  width: 70px;
+  height: 25px;
+  background: #424242;
+  color: #E0E0E0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.cBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-menu {
+  width: 350px;
+  height: 270px;
+  background: #2F2F2F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px #121212 solid;
+  border-radius: 15px;
+}
+
+.contact-menu p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-menu p a {
+  width: 20px;
+  height: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-menu p a img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+          filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+}
+
+.contact-menu button {
+  width: 70px;
+  height: 25px;
+  background: #424242;
+  color: #E0E0E0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=settings.css.map */

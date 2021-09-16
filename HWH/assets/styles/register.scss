@@ -1,0 +1,96 @@
+$pBackground: #383838;
+$cBackground: #424242;
+$nBackground: #212121;
+$bBackground: #121212;
+$tBackground: #E0E0E0;
+$iBackground: #2F2F2F;
+$sBackground: #2E2E2E;
+
+$svgFilter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+
+main {
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        background: $iBackground;
+        height: 80%;
+        width: 60%;
+        @media (max-width: 660px) {
+            width: 90%;
+        }
+        border: 1px $bBackground solid;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .inputs {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 70%;
+            width: 60%;
+            @media (max-width: 660px) {
+                width: 90%;
+            }
+            flex-direction: column;
+            .input-holder {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                .label-holder {
+                    display: flex;
+                    align-items: center;
+                    .qm {
+                        width: 10px;
+                        filter: $svgFilter;
+                        margin-left: 5px;
+                        cursor: help;
+                        @media (max-width: 660px) {
+                            display: none;
+                        }
+                    }
+                }
+                input {
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px $bBackground solid;
+                    color: $tBackground;
+                    outline: none;
+                    font-size: 20px;
+                    width: 80%;
+                }
+                div {
+                    display: flex;
+                    img {
+                        width: 20px;
+                        filter: $svgFilter;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .button-holder {
+                width: 60%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                @media (max-width: 660px) {
+                    width: 80%;
+                }
+                button {
+                    width: 70px;
+                    height: 25px;
+                    background: $cBackground;
+                    color: $tBackground;
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

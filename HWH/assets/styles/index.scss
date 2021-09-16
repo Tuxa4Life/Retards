@@ -1,0 +1,130 @@
+$pBackground: #383838; // primary background
+$cBackground: #424242; // card background
+$nBackground: #212121; // nav background
+$bBackground: #121212; // border background
+$tBackground: #E0E0E0; // text background
+$iBackground: #2F2F2F; // input background
+$sBackground: #2E2E2E; // sidebar background
+
+$svgFilter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+
+a {
+    color: $tBackground;
+    text-decoration: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin-bottom: 50px;
+    main {
+        .posts {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 15vh;
+            h1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                color: $tBackground;
+                img {
+                    width: 20px;
+                    filter: $svgFilter;
+                    margin-left: 15px;
+                }
+                .p-down {
+                    display: none;
+                }
+            }
+            .recent-posts-container {
+                width: 100%;
+                min-height: 5vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                .post {
+                    width: 300px;
+                    min-height: 200px;
+                    background: $bBackground;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 5px;
+                    margin-top: 4vh;
+                    .header {
+                        width: 80%;
+                        height: 10%;
+                        display: flex;
+                        justify-content: center;
+                        word-break: break-all;
+                        text-align: left;
+                    }
+                    .text {
+                        width: 80%;
+                        height: 70%;
+                        word-break: break-all;
+                    }
+                    .extra {
+                        height: 10%;
+                        width: 90%;
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: space-between;
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                    .type {
+                        font-size: 13px;
+                        position: absolute;
+                        top: 0px;
+                        left: 5px;
+                        font-weight: bold;
+                    }
+                }
+                .post:first-child {
+                    margin-top: 7vh;
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #999999;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(90, 90, 90);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(67, 67, 67);
+}

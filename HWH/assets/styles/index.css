@@ -1,0 +1,173 @@
+a {
+  color: #E0E0E0;
+  text-decoration: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin-bottom: 50px;
+}
+
+body main .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15vh;
+}
+
+body main .posts h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  color: #E0E0E0;
+}
+
+body main .posts h1 img {
+  width: 20px;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+          filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+  margin-left: 15px;
+}
+
+body main .posts h1 .p-down {
+  display: none;
+}
+
+body main .posts .recent-posts-container {
+  width: 100%;
+  min-height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .posts .recent-posts-container .post {
+  width: 300px;
+  min-height: 200px;
+  background: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  margin-top: 4vh;
+}
+
+body main .posts .recent-posts-container .post .header {
+  width: 80%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  word-break: break-all;
+  text-align: left;
+}
+
+body main .posts .recent-posts-container .post .text {
+  width: 80%;
+  height: 70%;
+  word-break: break-all;
+}
+
+body main .posts .recent-posts-container .post .extra {
+  height: 10%;
+  width: 90%;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .posts .recent-posts-container .post .extra p {
+  font-size: 12px;
+}
+
+body main .posts .recent-posts-container .post .type {
+  font-size: 13px;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  font-weight: bold;
+}
+
+body main .posts .recent-posts-container .post:first-child {
+  margin-top: 7vh;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #999999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a5a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #434343;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,237 @@
+$pBackground: #383838; // primary background
+$cBackground: #424242; // card background
+$nBackground: #212121; // nav background
+$bBackground: #121212; // border background
+$tBackground: #E0E0E0; // text background
+$iBackground: #2F2F2F; // input background
+$sBackground: #2E2E2E; // sidebar background
+
+$svgFilter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+
+a {
+    color: $tBackground;
+    text-decoration: none;
+}
+
+img {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: $pBackground;
+    color: $tBackground;
+    position: relative;
+    nav {
+        width: 100%;
+        height: 10vh;
+        background: $nBackground;
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .nav-b {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            @media (max-width: 660px) {
+                display: none;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 100%;
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30%;
+                    p {
+                        font-size: 20px;
+                    }
+                    a {
+                        height: 100%;
+                        width: 30%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .cog {
+                position: absolute;
+                right: 40px;
+                top: 35%;
+                width: 20px;
+                height: 20px;
+                filter: $svgFilter;
+            }
+            .cog:hover {
+                transition: 1.5s;
+                transform: rotate(360deg);
+                cursor: pointer;
+            }
+        }   
+        .nav-s {
+            width: 100%;
+            height: 100%;
+            background: $nBackground;
+            display: none;
+            @media (max-width: 660px) {
+                display: flex;
+            }
+            .menu-holder {
+                width: 15%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 20px;
+                    filter: $svgFilter;
+                }
+            }
+            .title-holder {
+                width: 70%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 70%;
+            height: 100vh;
+            background: $sBackground;
+            z-index: 5;
+            .closer-holder {
+                height: 10vh;
+                width: 100%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                img {
+                    width: 20px;
+                    filter: $svgFilter;
+                }
+                .open-img {
+                    animation: menu-slide 1s .5s both;
+                }
+                .close-img {
+                    animation: menu-slide-close 1s both;
+                }
+            }
+            .content-holder {
+                height: 90vh;
+                ul {
+                    margin: 5% 0 0 10%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    li {
+                        font-size: 20px;
+                        font-weight: bold;
+                        img {
+                            width: 15px;
+                            filter: $svgFilter;
+                        }
+                    }
+                }
+            }
+        }
+        .sidebar-background {
+            position: fixed;
+            top: 0;
+            display: none;
+            right: 0;
+            width: 70%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            z-index: 4;
+            backdrop-filter: blur(5px);
+        }
+        .open-sidebar-background {
+            animation: background-appear 0.5s 0.3s both;
+        }
+        .close-sidebar-background {
+            animation: background-dissapear 0.5s both;
+        }
+        .open-sidebar {
+            animation: sidebar-slide 1s both;
+        }
+        .close-sidebar {
+            animation: sidebar-slide-close 1s;
+        }
+    }
+    .settings-tab {
+        position: fixed;
+        top: 10vh;
+        right: -200px;
+        width: 150px;
+        height: 150px;
+        background: $cBackground;
+        border-bottom: 1px $bBackground solid;
+        border-left: 1px $bBackground solid;
+        align-items: center;
+        flex-direction: column;
+        z-index: 4;
+        ul {
+            width: 100%;
+            height: 100%;
+            margin-left: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            li {
+                font-size: 20px;
+                cursor: pointer;
+                img {
+                    width: 15px;
+                    filter: $svgFilter;
+                }
+            }
+        }
+    }
+    .open-settings {
+        animation: settings 0.5s both;
+    }
+    .close-settings {
+        animation: settings-close 0.5s both;
+    }
+}
+
+@keyframes settings {0% {right: -200px;} 100% {right: 0;}}
+@keyframes settings-close {0% {right: 0px;} 100% {right: -200px;}}
+
+@keyframes background-appear {100% {opacity: 1;}}
+@keyframes background-dissapear {0% {opacity: 1;} 100% {opacity: 0;}}
+
+@keyframes sidebar-slide {0% {left: -100%;} 100% {left: 0;}}
+@keyframes sidebar-slide-close { 0% {left: 0;} 100% {left: -100%;}}
+
+@keyframes menu-slide {100% {margin-left: 85%; transform: rotate(720deg);}}
+@keyframes menu-slide-close {0% {margin-left: 85%; transform: rotate(0deg);} 100% {margin-left: 0; transform: rotate(720deg);}}

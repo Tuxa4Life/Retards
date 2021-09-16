@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/navbar.css">
+    <link rel="stylesheet" href="assets/styles/assets.css">
+    <link rel="stylesheet" href="assets/styles/settings.css">
+    <link rel="shortcut icon" href="assets/images/logo-light-transp.png">
+    <title>HWH</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-b">
+            <ul>
+                <li><p class="nav-quicklink"><a href="assets.html">Assets</a></p></li>
+                <li><a href="index.html"><img class="logo-img" src="assets/images/logo-light-transp.png" alt="HWH"></a></li>
+                <li><p class="nav-quicklink"><a href="soon.html">Chats</a></p></li>
+            </ul>
+            <img class="cog" src="assets/icons/cog.svg" alt="Settings">
+        </div>
+        <div class="nav-s">
+            <div class="menu-holder">
+                <img class="sidebarBtn1" src="assets/icons/bars.svg" alt="Menu">
+            </div>
+            <div class="title-holder">
+                <h1><a href="index.html">HWH</a></h1>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="closer-holder">
+                <img class="sidebarBtn2" src="assets/icons/bars.svg" alt="Menu">
+            </div>
+            <div class="content-holder">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assets.html">Assets</a></li>
+                    <li><a href="soon.html">Chats</a></li>
+                    <li class="profile-btn2"><img src="assets/icons/user.svg" alt=""> Profile</li>
+                    <li class="theme-btn2"><img src="assets/icons/adjust.svg" alt=""> Theme</li>
+                    <li><img src="assets/icons/lang.svg" alt=""> Language</li>
+                    <li class="contact-btn2"><img src="assets/icons/phone.svg" alt=""> Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-background">
+        </div>
+    </nav>
+
+    <div class="settings-tab card">
+        <ul>
+            <li class="profile-btn"><img src="assets/icons/user.svg" alt=""> Profile</li>
+            <li class="theme-btn1"><img src="assets/icons/adjust.svg" alt=""> Theme</li>
+            <li><img src="assets/icons/lang.svg" alt=""> Language</li>
+            <li class="contact-btn"><img src="assets/icons/phone.svg" alt=""> Contact</li>
+        </ul>
+    </div>
+
+    <main>
+        
+        <div class="filter-list">
+            <h2>Filter Categories</h2>
+            <ul class="filter-ul">
+                <li class="None">All</li>
+                <li class="Georgian">Georgian</li>
+                <li class="Mathematics">Mathematics</li>
+                <li class="Biology">Biology</li>
+                <li class="Chemistry">Chemistry</li>
+                <li class="History">History</li>
+                <li class="Physics">Physics</li>
+                <li class="English">English</li>
+                <li class="Russian">Russian</li>
+            </ul>
+            <button class="filter-cancel-btn">Cancel</button>
+        </div>
+
+        <div class="create-background">
+            <div class="create-menu card">
+                <h2>Create Post</h2>
+                <textarea class="headerbox" placeholder="Header"></textarea>
+                <textarea class="textbox" placeholder="Write Text Here.."></textarea>
+                <select class="selector">
+                    <option class="option" selected value="None">None</option>
+                    <option class="option" value="Georgian">Georgian</option>
+                    <option class="option" value="Mathematics">Mathematics</option>
+                    <option class="option" value="Biology">Biology</option>
+                    <option class="option" value="Chemistry">Chemistry</option>
+                    <option class="option" value="History">History</option>
+                    <option class="option" value="Physics">Physics</option>
+                    <option class="option" value="English">English</option>
+                    <option class="option" value="Russian">Russian</option>
+                </select>
+                <div class="buttons">
+                    <div class="btn-wrapper">
+                        <button class="post-btn">Post</button>
+                        <button class="cancel-button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-place"></div>
+
+        <div class="upload-btn card">
+            <span>Create Post </span>
+            <img src="assets/icons/plus.svg" alt="New">
+        </div>
+        <div class="filter-btn card">
+            <span>Filter </span>
+            <img src="assets/icons/filter.svg" alt="New">
+        </div>
+        
+    </main>
+
+
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/load_user_info.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/assets.js"></script>
+</body>
+</html>

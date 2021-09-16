@@ -1,0 +1,243 @@
+// light theme
+.light {
+    .card, .post {
+        background: #d6d6d6 !important;
+    }
+    background: #F0F2F5;
+    p, h1, h2, h3, h4, h5, h6, span, li, a, textarea {
+        color: black !important;
+    }
+    img {
+        filter: invert(0%) sepia(94%) saturate(0%) hue-rotate(231deg) brightness(105%) contrast(106%) !important;
+    }
+    .nav-b, .nav-s {
+        background: #FFFFFF !important;
+        -webkit-box-shadow: 1px 6px 23px -9px #000000 !important; 
+        box-shadow: 1px 6px 23px -9px #000000 !important;
+    }
+    .sidebar {
+        background: #d6d6d6;
+    }
+}
+
+
+$pBackground: #383838; // primary background
+$cBackground: #424242; // card background
+$nBackground: #212121; // nav background
+$bBackground: #121212; // border background
+$tBackground: #E0E0E0; // text background
+$iBackground: #2F2F2F; // input background
+$sBackground: #2E2E2E; // sidebar background
+$svgFilter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+
+// theme
+.tBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeMenu {
+    width: 280px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: $iBackground;
+    border: 2px $bBackground solid;
+    border-radius: 10px;
+    position: relative;
+    .tinput-holder {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+        height: 25px;
+        background: $cBackground;
+        border: 1px $bBackground;
+        border-radius: 10px;
+        margin-left: 10%;
+        cursor: pointer;
+        label, input {
+            cursor: pointer;
+        }
+    }
+    .buttons {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        button {
+            width: 70px;
+            height: 25px;
+            background: $cBackground;
+            color: $tBackground;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+// profile
+.pBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileMenu {
+    width: 350px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $iBackground;
+    border: 2px $bBackground solid;
+    border-radius: 10px;
+    label {
+        width: 60%;
+        text-align: left;
+        margin-top: 20px;
+    }
+    input {
+        width: 60%;
+        background: $iBackground;
+        border: none;
+        border-bottom: 1px $bBackground solid;
+        color: $tBackground;
+        font-size: 16px;
+        outline: none;
+        margin-top: 10px;
+    }
+    .btn-holder {
+        display: flex;
+        width: 150px;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            width: 70px;
+            height: 30px;
+            margin-top: 20px;
+            background: $cBackground;
+            color: $tBackground;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .cancelButton {
+            background: $cBackground;
+        }
+    }
+    span {
+        font-size: 12px;
+        margin-top: 10px;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+.logginedMenu {
+    width: 350px;
+    height: 270px;
+    background: $iBackground;
+    border: 2px $bBackground solid;
+    border-radius: 10px;
+    position: relative;
+    .info {
+        margin: 10% 0 0 5%;
+        h6 {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .deleteAcc {
+        font-size: 12px;
+        text-decoration: underline;
+        cursor: pointer;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+    }
+    .buttons {
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        button {
+            width: 70px;
+            height: 25px;
+            background: $cBackground;
+            color: $tBackground;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+// contact 
+.cBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-menu {
+    width: 350px;
+    height: 270px;
+    background: $iBackground;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border: 1px $bBackground solid;
+    border-radius: 15px;
+    p {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        a {
+            width: 20px;
+            height: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                filter: $svgFilter;
+            }
+        }
+    }
+    button {
+        width: 70px;
+        height: 25px;
+        background: $cBackground;
+        color: $tBackground;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+}
