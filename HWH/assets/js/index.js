@@ -17,3 +17,29 @@ let changePCState = () => {
 
 $p_up.addEventListener('click', changePCState)
 $p_down.addEventListener('click', changePCState)
+
+// register popup
+const $register_popup = document.querySelector('.register-popup')
+const $popupRegBtn = document.querySelector('.reg-btn')
+const $popupLogBtn = document.querySelector('.log-btn')
+const $indexPosts = document.querySelector('.posts')
+
+if (localStorage.getItem('loginState') == 'true') {
+    $register_popup.style.display = 'none'
+    $indexPosts.style.display = 'flex'
+} else {
+    $register_popup.style.display = 'flex'
+    $indexPosts.style.display = 'none'
+}
+
+$popupRegBtn.addEventListener (
+    'click', function () {
+        window.location.href = 'register.html'
+    }
+)
+
+$popupLogBtn.addEventListener (
+    'click', function () {
+        profileStateChange ()
+    }
+)

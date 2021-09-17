@@ -26,7 +26,7 @@ body {
   margin-bottom: 50px;
 }
 
-body main .posts {
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,6 +43,79 @@ body main .posts {
   margin-top: 15vh;
 }
 
+body main .register-popup {
+  width: 400px;
+  height: 400px;
+  background: #2b2b2b;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px #121212 solid;
+  -webkit-box-shadow: 0px 0px 15px 0px #000000;
+  box-shadow: 0px 0px 15px 0px #000000;
+}
+
+body main .register-popup div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .register-popup div button {
+  background-color: #424242;
+  color: #E0E0E0;
+  border-radius: 5px;
+  border: 1px #121212 solid;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+body main .register-popup div button:hover {
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 15px;
+  background: grey;
+}
+
+body main .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5vh;
+}
+
 body main .posts h1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,7 +126,7 @@ body main .posts h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 80%;
+  width: 400px;
   color: #E0E0E0;
 }
 
@@ -89,7 +162,7 @@ body main .posts .recent-posts-container {
 body main .posts .recent-posts-container .post {
   width: 300px;
   min-height: 200px;
-  background: #121212;
+  background: #2b2b2b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
