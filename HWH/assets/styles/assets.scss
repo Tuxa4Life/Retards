@@ -328,6 +328,7 @@ main {
             width: 300px;
             min-height: 220px;
             background: $postBackground;
+            border: 1px $bBackground solid;
             display: flex;
             align-items: center;
             justify-content: center;

@@ -178,6 +178,7 @@ body main .posts .recent-posts-container .post {
           flex-direction: column;
   border-radius: 5px;
   margin-top: 4vh;
+  border: 1px #121212 solid;
 }
 
 body main .posts .recent-posts-container .post .header {

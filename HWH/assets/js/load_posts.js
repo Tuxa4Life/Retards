@@ -15,7 +15,7 @@ if (arr) {
                 <p class="text">${arr[i].text}</p>
                 <div class="extra">
                     <p>${arr[i].date}</p>
-                    <p>${ProfileValues.n}</p>
+                    <p>${arr[i].author}</p>
                 </div>
             `
         }

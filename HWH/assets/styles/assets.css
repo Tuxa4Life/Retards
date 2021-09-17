@@ -444,6 +444,7 @@ main .post-place .post {
   width: 300px;
   min-height: 220px;
   background: #2b2b2b;
+  border: 1px #121212 solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -37,6 +37,7 @@ const $place = document.querySelector('.post-place')
 const $selector = document.querySelector('.selector')
 
 let values = {
+    author: ProfileValues.n,
     header: '',
     text: '',
     date: '',
@@ -60,7 +61,7 @@ let loadValues = () => {
                     <p class="text">${arr[i].text}</p>
                     <div class="extra">
                         <p>${arr[i].date}</p>
-                        <p>${ProfileValues.n}</p>
+                        <p>${arr[i].author}</p>
                     </div>
                     <p class="type">${arr[i].category}</p>
                 `
