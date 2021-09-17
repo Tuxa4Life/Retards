@@ -336,6 +336,15 @@ main {
             border-radius: 5px;
             margin-top: 4vh;
             position: relative;
+            img {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                filter: $svgFilter;
+                width: 10px;
+                height: 10px;
+                object-fit: contain;
+            }
             .header {
                 width: 80%;
                 height: 10%;

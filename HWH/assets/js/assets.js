@@ -42,6 +42,7 @@ let values = {
     text: '',
     date: '',
     category: $selector.value,
+    id: '',
 }
 
 let arr = JSON.parse(localStorage.getItem('values'))
@@ -52,11 +53,14 @@ let loadValues = () => {
             if (arr[i] == 'null') {
                 null
             } else {
+
                 let post = document.createElement('div')
                 $place.appendChild(post)
                 post.classList.add('post')
+                post.setAttribute('data-id', arr[i].id)
                 post.setAttribute('data-category', arr[i].category)
                 post.innerHTML = `
+                    <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="">
                     <h2 class="header">${arr[i].header}</h2>
                     <p class="text">${arr[i].text}</p>
                     <div class="extra">
@@ -65,6 +69,21 @@ let loadValues = () => {
                     </div>
                     <p class="type">${arr[i].category}</p>
                 `
+
+                let deleteBtn = document.querySelectorAll('.delete-post-btn')
+                
+                deleteBtn.forEach(item => item.addEventListener (
+                    'click', function () {
+                        for (let i = 0; i < arr.length; i++) {
+                            if (arr[i].id == item.getAttribute('data-delete')) {
+                                arr.splice(i, 1)
+                                let tmp = JSON.stringify(arr)
+                                localStorage.setItem('values', tmp)
+                                window.location.reload ()
+                            }
+                        }
+                    }
+                ))
             }
         }
     }
@@ -74,7 +93,9 @@ window.addEventListener('load', loadValues)
 
 let getValue = () => {
     let date = new Date().toLocaleDateString ()
+    let idNumber = Math.floor(Math.random (1000000 - 100000) * 1000000)
 
+    values.id = idNumber
     values.header = $headerInput.value
     values.text = $textInput.value
     values.date = date
