@@ -6,6 +6,7 @@ let kickGuest = () => {
 }
 
 window.addEventListener('load', kickGuest)
+
 window.onload = function () {
     if (localStorage.getItem("hasCodeRunBefore") === null) {
         let tmpArr = ['null']
