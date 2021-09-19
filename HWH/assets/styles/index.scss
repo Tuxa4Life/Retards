@@ -86,6 +86,11 @@ body {
                 justify-content: center;
                 width: 400px;
                 color: $tBackground;
+                img:first-child {
+                    margin-right : 10px;
+                    width: 30px;
+                    height: 30px;
+                }
                 img {
                     width: 20px;
                     filter: $svgFilter;
@@ -147,6 +152,71 @@ body {
                 .post:first-child {
                     margin-top: 7vh;
                 }
+            }
+        }
+    }
+    .fav-posts {
+        h1 {
+            .fp-down {
+                display: none;
+            }
+        }
+        .favourite-posts-container {
+            width: 100%;
+            min-height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .fav-post {
+                width: 300px;
+                min-height: 200px;
+                background: $postBackground;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 5px;
+                margin-top: 4vh;
+                border: 1px $bBackground solid;
+                .header {
+                    width: 80%;
+                    height: 10%;
+                    display: flex;
+                    justify-content: center;
+                    word-break: break-all;
+                    text-align: left;
+                }
+                .text {
+                    width: 80%;
+                    height: 70%;
+                    word-break: break-all;
+                }
+                .extra {
+                    height: 10%;
+                    width: 90%;
+                    margin-top: 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-size: 12px;
+                    }
+                    .fav-icon {
+                        width: 20px;
+                        height: 20px;
+                        filter: $svgFilter;
+                    }
+                }
+                .type {
+                    font-size: 13px;
+                    position: absolute;
+                    top: 0px;
+                    left: 5px;
+                    font-weight: bold;
+                }
+            }
+            .post:first-child {
+                margin-top: 7vh;
             }
         }
     }

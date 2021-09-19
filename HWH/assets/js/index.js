@@ -43,3 +43,23 @@ $popupLogBtn.addEventListener (
         profileStateChange ()
     }
 )
+
+// fav side funcs
+const $fpUp = document.querySelector('.fp-up')
+const $fpDown = document.querySelector('.fp-down')
+const $favPostContainer = document.querySelector('.favourite-posts-container')
+
+let FCState = false
+let changeFCState = () => {
+    FCState = !FCState
+    if (FCState == true) {
+        $favPostContainer.style.display = $fpUp.style.display = 'flex'
+        $fpDown.style.display = 'none'
+    } else {
+        $favPostContainer.style.display = $fpUp.style.display = 'none'
+        $fpDown.style.display = 'flex'
+    }
+}
+
+$fpUp.addEventListener('click', changeFCState)
+$fpDown.addEventListener('click', changeFCState)

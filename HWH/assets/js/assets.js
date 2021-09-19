@@ -44,6 +44,7 @@ let values = {
     date: '',
     category: $selector.value,
     id: '',
+    favourite: false,
 }
 
 let arr = JSON.parse(localStorage.getItem('values'))
@@ -61,10 +62,11 @@ let loadValues = () => {
                 post.setAttribute('data-id', arr[i].id)
                 post.setAttribute('data-category', arr[i].category)
                 post.innerHTML = `
-                    <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="">
+                    <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="X">
                     <h2 class="header">${arr[i].header}</h2>
                     <p class="text">${arr[i].text}</p>
                     <div class="extra">
+                        <img data-fav-id="${arr[i].id}" class="fav-icon" src="assets/icons/star-outline.svg">
                         <p>${arr[i].date}</p>
                         <p>${arr[i].author}</p>
                     </div>
@@ -78,6 +80,19 @@ let loadValues = () => {
                         for (let i = 0; i < arr.length; i++) {
                             if (arr[i].id == item.getAttribute('data-delete')) {
                                 arr.splice(i, 1)
+                                let tmp = JSON.stringify(arr)
+                                localStorage.setItem('values', tmp)
+                                window.location.reload ()
+                            }
+                        }
+                    }
+                ))
+
+                document.querySelectorAll('.fav-icon').forEach(item => item.addEventListener (
+                    'click', function () {
+                        for (let i = 0; i < arr.length; i++) {
+                            if (arr[i].id == item.getAttribute('data-fav-id')) {
+                                arr[i].favourite = true
                                 let tmp = JSON.stringify(arr)
                                 localStorage.setItem('values', tmp)
                                 window.location.reload ()

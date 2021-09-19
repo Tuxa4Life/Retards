@@ -157,7 +157,7 @@ main {
             border-radius: 5px;
             margin-top: 4vh;
             position: relative;
-            img {
+            .delete-post-btn {
                 position: absolute;
                 top: 2px;
                 right: 2px;
@@ -184,9 +184,15 @@ main {
                 width: 90%;
                 margin-top: 50px;
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
                 p {
                     font-size: 12px;
+                }
+                .fav-icon {
+                    width: 20px;
+                    height: 20px;
+                    filter: $svgFilter;
                 }
             }
             .type {

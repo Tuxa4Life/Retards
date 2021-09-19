@@ -215,7 +215,7 @@ main .post-place .post {
   position: relative;
 }
 
-main .post-place .post img {
+main .post-place .post .delete-post-btn {
   position: absolute;
   top: 2px;
   right: 2px;
@@ -253,6 +253,9 @@ main .post-place .post .extra {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -260,6 +263,13 @@ main .post-place .post .extra {
 
 main .post-place .post .extra p {
   font-size: 12px;
+}
+
+main .post-place .post .extra .fav-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+          filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
 }
 
 main .post-place .post .type {
