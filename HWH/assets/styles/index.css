@@ -185,6 +185,7 @@ body main .posts .recent-posts-container .post {
   border-radius: 5px;
   margin-top: 4vh;
   border: 1px #121212 solid;
+  position: relative;
 }
 
 body main .posts .recent-posts-container .post .header {
@@ -216,10 +217,19 @@ body main .posts .recent-posts-container .post .extra {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-top: 1px #E0E0E0 solid;
+  padding-top: 10px;
 }
 
 body main .posts .recent-posts-container .post .extra p {
   font-size: 12px;
+}
+
+body main .posts .recent-posts-container .post .extra .fav-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
+          filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
 }
 
 body main .posts .recent-posts-container .post .type {
@@ -276,6 +286,7 @@ body .fav-posts .favourite-posts-container .fav-post {
   border-radius: 5px;
   margin-top: 4vh;
   border: 1px #121212 solid;
+  position: relative;
 }
 
 body .fav-posts .favourite-posts-container .fav-post .header {
@@ -307,6 +318,8 @@ body .fav-posts .favourite-posts-container .fav-post .extra {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-top: 1px #E0E0E0 solid;
+  padding-top: 10px;
 }
 
 body .fav-posts .favourite-posts-container .fav-post .extra p {

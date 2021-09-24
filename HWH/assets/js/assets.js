@@ -45,6 +45,7 @@ let values = {
     category: $selector.value,
     id: '',
     favourite: false,
+    star_pic : '',
 }
 
 let arr = JSON.parse(localStorage.getItem('values'))
@@ -55,7 +56,12 @@ let loadValues = () => {
             if (arr[i] == 'null') {
                 null
             } else {
-
+                if (arr[i].favourite == true) {
+                    arr[i].star_pic = 'assets/icons/star-filled.svg'
+                } else {
+                    arr[i].star_pic = 'assets/icons/star-outline.svg'
+                }
+                
                 let post = document.createElement('div')
                 $place.appendChild(post)
                 post.classList.add('post')
@@ -66,7 +72,7 @@ let loadValues = () => {
                     <h2 class="header">${arr[i].header}</h2>
                     <p class="text">${arr[i].text}</p>
                     <div class="extra">
-                        <img data-fav-id="${arr[i].id}" class="fav-icon" src="assets/icons/star-outline.svg">
+                        <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
                         <p>${arr[i].date}</p>
                         <p>${arr[i].author}</p>
                     </div>

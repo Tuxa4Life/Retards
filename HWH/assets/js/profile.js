@@ -107,8 +107,10 @@ $profileBtn2.addEventListener('click', profileStateChange)
 let login = () => {
     if (inputValues.email == ProfileValues.e && inputValues.password == ProfileValues.p) {
         localStorage.setItem('loginState', true)
+        window.location.reload ()
         closeMenu ()
     } else {
+        localStorage.removeItem('loginState')
         alert('Login Failed Please try again')
     }
 }

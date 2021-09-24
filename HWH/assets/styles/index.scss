@@ -118,6 +118,7 @@ body {
                     border-radius: 5px;
                     margin-top: 4vh;
                     border: 1px $bBackground solid;
+                    position: relative;
                     .header {
                         width: 80%;
                         height: 10%;
@@ -137,8 +138,15 @@ body {
                         margin-top: 50px;
                         display: flex;
                         justify-content: space-between;
+                        border-top: 1px $tBackground solid;
+                        padding-top: 10px;
                         p {
                             font-size: 12px;
+                        }
+                        .fav-icon {
+                            width: 20px;
+                            height: 20px;
+                            filter: $svgFilter;
                         }
                     }
                     .type {
@@ -179,6 +187,7 @@ body {
                 border-radius: 5px;
                 margin-top: 4vh;
                 border: 1px $bBackground solid;
+                position: relative;
                 .header {
                     width: 80%;
                     height: 10%;
@@ -198,6 +207,8 @@ body {
                     margin-top: 50px;
                     display: flex;
                     justify-content: space-between;
+                    border-top: 1px $tBackground solid;
+                    padding-top: 10px;
                     p {
                         font-size: 12px;
                     }

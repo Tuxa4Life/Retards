@@ -7,8 +7,10 @@ let changeInputStatus = () => {
     inputStatus = !inputStatus
     if (inputStatus == true) {
         $passInput.setAttribute('type', 'text')
+        $eye.setAttribute('src', 'assets/icons/eye-crossed.svg')
     } else {
         $passInput.setAttribute('type', 'password')
+        $eye.setAttribute('src', 'assets/icons/eye.svg')
     }
 }
 
