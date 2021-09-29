@@ -73,10 +73,10 @@ let checkContainerChilds = () => {
     if ($recentPostContainer.childElementCount == 0) {
         document.querySelector('.recent-posts').style.display = 'none'
     }
-    if ($Main.childElementCount == 3) {
-        let text = document.createElement('h3')
+    if ($recentPostContainer.style.display == 'none' && $favPostContainer.style.display == 'none' && $register_popup.style.display == 'none') {
+        let text = document.createElement('h2')
         $Main.appendChild(text)
-        text.textContent = 'Seems there is nothing to show...'
+        text.textContent = "Seems There's nothing to Show..."
     }
 }
 
