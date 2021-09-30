@@ -114,13 +114,20 @@ let loadValues = () => {
 window.addEventListener('load', loadValues)
 
 let getValue = () => {
+    var d = new Date();
+    let hour = d.getHours(); // => 9
+    let minute = d.getMinutes(); // =>  30
+    let fullTime = `${hour}:${minute}`
+
     let date = new Date().toLocaleDateString ()
+    let fullDate = `${fullTime} - ${date}`
+
     let idNumber = Math.floor(Math.random (1000000 - 100000) * 1000000)
 
     values.id = idNumber
     values.header = $headerInput.value
     values.text = $textInput.value
-    values.date = date
+    values.date = fullDate
 }
 
 $selector.addEventListener(
@@ -137,7 +144,7 @@ let createPost = () => {
     let tmp = JSON.stringify(arr)
     localStorage.setItem('values', tmp)
 
-    location.reload ()
+    window.location.reload ()
 }
 
 $postBtn.addEventListener('click', createPost)

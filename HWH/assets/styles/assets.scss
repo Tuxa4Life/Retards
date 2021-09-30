@@ -184,8 +184,9 @@ main {
                 width: 90%;
                 margin-top: 50px;
                 display: flex;
-                align-items: center;
                 justify-content: space-between;
+                border-top: 1px $tBackground solid;
+                padding-top: 10px;
                 p {
                     font-size: 12px;
                 }
