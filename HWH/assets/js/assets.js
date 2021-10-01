@@ -11,7 +11,7 @@ window.onload = function () {
     if (localStorage.getItem("hasCodeRunBefore") === null) {
         let tmpArr = ['null']
         localStorage.setItem('values', JSON.stringify(tmpArr))
-        localStorage.setItem("hasCodeRunBefore", true);
+        localStorage.setItem("hasCodeRunBefore", true)
     }
 }
 

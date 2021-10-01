@@ -63,21 +63,3 @@ let changeFCState = () => {
 
 $fpUp.addEventListener('click', changeFCState)
 $fpDown.addEventListener('click', changeFCState)
-
-const $Main = document.querySelector('#main')
-
-let checkContainerChilds = () => {
-    if ($favPostContainer.childElementCount == 0) {
-        document.querySelector('.fav-posts').style.display = 'none'
-    }
-    if ($recentPostContainer.childElementCount == 0) {
-        document.querySelector('.recent-posts').style.display = 'none'
-    }
-    if ($recentPostContainer.style.display == 'none' && $favPostContainer.style.display == 'none' && $register_popup.style.display == 'none') {
-        let text = document.createElement('h2')
-        $Main.appendChild(text)
-        text.textContent = "Seems There's nothing to Show..."
-    }
-}
-
-window.addEventListener('load', checkContainerChilds)
