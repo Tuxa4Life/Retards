@@ -25,9 +25,15 @@ let openMenu = () => { // open function
     background = document.createElement('div') // creating background for menu
     $body.appendChild(background)
     background.classList.add('pBackground')
-
+    
     menu = document.createElement('div') // creating menu
     background.appendChild(menu)
+    
+    let closeMenu = () => { // menu closing function
+        pMenuState = false
+        let el = document.querySelector('.pBackground')
+        el.remove ()
+    }
 
     if (localStorage.getItem('loginState') == "true") {
         menu.classList.add('logginedMenu')
@@ -96,10 +102,6 @@ let openMenu = () => { // open function
     }
 }
 
-let closeMenu = () => { // menu closing function
-    let el = document.querySelector('.pBackground')
-    el.remove ()
-}
 
 $profileBtn.addEventListener('click', profileStateChange)
 $profileBtn2.addEventListener('click', profileStateChange)
