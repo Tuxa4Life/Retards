@@ -322,4 +322,52 @@
   border: none;
   cursor: pointer;
 }
+
+.LBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 6;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.languageMenu {
+  width: 60%;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #2F2F2F;
+  border: 1px #121212 solid;
+  border-radius: 15px;
+}
+
+.languageMenu button {
+  width: 70px;
+  height: 25px;
+  background: #424242;
+  color: #E0E0E0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 /*# sourceMappingURL=settings.css.map */

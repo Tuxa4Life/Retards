@@ -350,6 +350,16 @@ body .fav-posts .favourite-posts-container .post:first-child {
   height: 7px;
 }
 
+.arrow-open {
+  -webkit-animation: arrow-open 0.5s both;
+          animation: arrow-open 0.5s both;
+}
+
+.arrow-close {
+  -webkit-animation: arrow-close 0.5s both;
+          animation: arrow-close 0.5s both;
+}
+
 ::-webkit-scrollbar-track {
   background: #999999;
 }
@@ -360,5 +370,49 @@ body .fav-posts .favourite-posts-container .post:first-child {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #434343;
+}
+
+@-webkit-keyframes arrow-open {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes arrow-open {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes arrow-close {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes arrow-close {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 /*# sourceMappingURL=index.css.map */

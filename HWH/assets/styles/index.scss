@@ -237,6 +237,14 @@ body {
     width: 7px;
     height: 7px;
 }
+
+.arrow-open {
+    animation: arrow-open 0.5s both;
+}
+
+.arrow-close { 
+    animation: arrow-close 0.5s both;
+} 
   
 ::-webkit-scrollbar-track {
     background: #999999;
@@ -248,4 +256,22 @@ body {
   
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(67, 67, 67);
+}
+
+@keyframes arrow-open {
+    0% {
+        transform: rotate(-0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes arrow-close {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }

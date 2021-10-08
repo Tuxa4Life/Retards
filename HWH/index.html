@@ -53,22 +53,28 @@
         <ul>
             <li class="profile-btn"><img src="assets/icons/user.svg" alt=""> Profile</li>
             <li class="theme-btn1"><img src="assets/icons/adjust.svg" alt=""> Theme</li>
-            <li><img src="assets/icons/lang.svg" alt=""> Language</li>
+            <li class="language-btn"><img src="assets/icons/lang.svg" alt=""> Language</li>
             <li class="contact-btn"><img src="assets/icons/phone.svg" alt=""> Contact</li>
         </ul>
     </div>
 
-    <main id="main">
-        <div class="posts fav-posts">
-            <h1><img src="assets/icons/star-filled.svg" alt=""> Favourite Posts <img class="fp-down" src="assets/icons/chevron-down.svg" alt=""><img class="fp-up" src="assets/icons/chevron-up.svg" alt=""></h1>
-            <div class="favourite-posts-container"></div>
+    <main id="main"></main>
+
+    <div class="LBackground">
+        <div class="languageMenu">
+            <div style="display: flex; align-items: center; justify-content: center;" id="google_translate_element"></div>
+            <button class="lang-close">Close</button>
         </div>
-        <div class="posts recent-posts">
-            <h1><img src="assets/icons/clock.svg" alt=""> Recent Posts <img class="p-down" src="assets/icons/chevron-down.svg" alt=""><img class="p-up" src="assets/icons/chevron-up.svg" alt=""></h1>
-            <div class="recent-posts-container"></div>
-        </div>
-    </main>
+    </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
     
+    <script src="assets/js/language.js"></script>
     <script src="assets/js/favourite.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/load_user_info.js"></script>
@@ -80,5 +86,6 @@
     <script src="assets/js/sidebar.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/index-containers.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 </body>
 </html>

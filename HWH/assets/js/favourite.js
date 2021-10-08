@@ -2,8 +2,9 @@ let loadFavPosts = () => {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].favourite == true) {
             let post = document.createElement('div')
-            $favPostContainer.appendChild(post)
+            document.querySelector('.favourite-posts-container').appendChild(post)
             post.classList.add('fav-post')
+            post.classList.add('card')
             post.setAttribute('data-id', arr[i].id)
             post.setAttribute('data-category', arr[i].category)
             post.innerHTML = `
@@ -19,5 +20,3 @@ let loadFavPosts = () => {
         }
     }
 }
-
-window.addEventListener('load', loadFavPosts)
