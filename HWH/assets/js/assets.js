@@ -122,7 +122,7 @@ let getValue = () => {
     let date = new Date().toLocaleDateString ()
     let fullDate = `${fullTime} - ${date}`
 
-    let idNumber = Math.floor(Math.random (1000000 - 100000) * 1000000)
+    let idNumber = Math.floor(Math.random() * Date.now())
 
     values.id = idNumber
     values.header = $headerInput.value
