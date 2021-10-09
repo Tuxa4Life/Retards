@@ -1,4 +1,5 @@
-const $langBtn = document.querySelector ('.language-btn')
+let $langBtn = document.querySelector ('.language-btn')
+let $langBtn2 = document.querySelector ('.language-btn2')
 let LMenuState = false
 let LMenuStateChanger = () => {
     LMenuState = !LMenuState
@@ -16,3 +17,4 @@ let openLMENU = () => {
 }
 
 $langBtn.addEventListener('click', LMenuStateChanger)
+$langBtn2.addEventListener('click', LMenuStateChanger)

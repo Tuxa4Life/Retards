@@ -7,13 +7,7 @@ let kickGuest = () => {
 
 window.addEventListener('load', kickGuest)
 
-window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
-        let tmpArr = ['null']
-        localStorage.setItem('values', JSON.stringify(tmpArr))
-        localStorage.setItem("hasCodeRunBefore", true)
-    }
-}
+
 
 // opening closing menu
 const $uploadBtn = document.querySelector('.upload-btn')

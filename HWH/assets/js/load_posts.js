@@ -1,1 +1,6 @@
-let arr = JSON.parse(localStorage.getItem('values'))
+let arr
+let loadPosts = () => {
+    arr = JSON.parse(localStorage.getItem('values'))
+}
+
+loadPosts ()

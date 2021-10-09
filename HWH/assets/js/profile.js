@@ -29,12 +29,6 @@ let openMenu = () => { // open function
     menu = document.createElement('div') // creating menu
     background.appendChild(menu)
     
-    let closeMenu = () => { // menu closing function
-        pMenuState = false
-        let el = document.querySelector('.pBackground')
-        el.remove ()
-    }
-
     if (localStorage.getItem('loginState') == "true") {
         menu.classList.add('logginedMenu')
         
@@ -81,7 +75,7 @@ let openMenu = () => { // open function
         ` // adding html for menu
 
         let $cancelBtn = document.querySelector('.cancelButton')
-        $cancelBtn.addEventListener('click', closeMenu)
+        $cancelBtn.addEventListener('click', profileStateChange)
 
         let emailInput = document.querySelector('.emailInput')
         emailInput.addEventListener(
@@ -100,6 +94,12 @@ let openMenu = () => { // open function
         loginBtn.addEventListener('click', login)
 
     }
+}
+
+let closeMenu = () => { // menu closing function
+    pMenuState = false
+    let el = document.querySelector('.pBackground')
+    el.remove ()
 }
 
 
