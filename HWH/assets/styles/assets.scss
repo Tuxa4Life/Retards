@@ -32,6 +32,7 @@ main {
     width: 100%;
     min-height: 100vh;
     position: relative;
+    margin-bottom: 10vh;
     .upload-btn {
         position: fixed;
         bottom: 20px;
@@ -231,6 +232,8 @@ main {
             align-items: center;
             justify-content: space-evenly;
             flex-direction: column;
+            border: 1px black solid;
+            border-radius: 15px;
             li {
                 font-size: 20px;
                 width: 70%;

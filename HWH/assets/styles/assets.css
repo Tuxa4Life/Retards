@@ -23,6 +23,7 @@ main {
   width: 100%;
   min-height: 100vh;
   position: relative;
+  margin-bottom: 10vh;
 }
 
 main .upload-btn {
@@ -321,6 +322,8 @@ main .filter-list ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px black solid;
+  border-radius: 15px;
 }
 
 @media (max-width: 660px) {

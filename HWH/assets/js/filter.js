@@ -19,15 +19,15 @@ let posts = document.querySelectorAll('.post')
 
 filterers.forEach(item => item.addEventListener (
     'click', function () {
-        loadValues ()
         posts = document.querySelectorAll('.post')
-        for (i = 0; i < filterers.length; i++) {
-            for (let j = 0; j < posts.length; j++) {
-                if (item.getAttribute('class') == 'None') {
-                    window.location.reload ()
-                } else if (item.getAttribute('class') != posts[j].getAttribute('data-category')) {
-                    posts[j].remove ()
-                }
+        for (let j = 0; j < posts.length; j++) {
+            posts[j].style.display = 'none'
+            if (item.getAttribute('class') == 'None') {
+                posts[j].style.display = 'flex'
+            } else if (item.getAttribute('class') == posts[j].getAttribute('data-category')) {
+                posts[j].style.display = 'flex'
+            } else if (item.textContent == 'Favourite' && posts[j].children[3].children[0].getAttribute('src') == 'assets/icons/star-filled.svg') {
+                posts[j].style.display = 'flex'
             }
         }
     }

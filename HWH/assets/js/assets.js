@@ -46,6 +46,7 @@ let arr = JSON.parse(localStorage.getItem('values'))
 
 let loadValues = () => {
     if (arr) {
+        let starBtn
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == 'null') {
                 null
@@ -79,29 +80,34 @@ let loadValues = () => {
                     'click', function () {
                         for (let i = 0; i < arr.length; i++) {
                             if (arr[i].id == item.getAttribute('data-delete')) {
-                                arr.splice(i, 1)
-                                let tmp = JSON.stringify(arr)
-                                localStorage.setItem('values', tmp)
-                                window.location.reload ()
-                            }
-                        }
-                    }
-                ))
-
-                document.querySelectorAll('.fav-icon').forEach(item => item.addEventListener (
-                    'click', function () {
-                        for (let i = 0; i < arr.length; i++) {
-                            if (arr[i].id == item.getAttribute('data-fav-id')) {
-                                arr[i].favourite = true
-                                let tmp = JSON.stringify(arr)
-                                localStorage.setItem('values', tmp)
-                                window.location.reload ()
+                                deleteFunction (i)
                             }
                         }
                     }
                 ))
             }
         }
+        starBtn = document.querySelectorAll('.fav-icon')
+
+        starBtn.forEach(item => item.addEventListener (
+            'click', function () {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i].id == item.getAttribute('data-fav-id')) {
+                        if (arr[i].favourite == false) {
+                            arr[i].favourite = true
+                            let tmp = JSON.stringify(arr)
+                            localStorage.setItem('values', tmp)
+                            window.location.reload ()
+                        } else {
+                            arr[i].favourite = false
+                            let tmp = JSON.stringify(arr)
+                            localStorage.setItem('values', tmp)
+                            window.location.reload ()
+                        }
+                    }
+                }
+            }
+        ))
     }
 }
 
@@ -132,13 +138,24 @@ $selector.addEventListener(
 
 let createPost = () => {
     getValue ()
-    closeCM ()
+    if (values.header != '' && values.text != '') {
+        closeCM ()
     
-    arr.push(values)
-    let tmp = JSON.stringify(arr)
-    localStorage.setItem('values', tmp)
+        arr.push(values)
+        let tmp = JSON.stringify(arr)
+        localStorage.setItem('values', tmp)
 
-    window.location.reload ()
+        window.location.reload ()
+    } else {
+        alert('Please input content')
+    }
 }
 
 $postBtn.addEventListener('click', createPost)
+
+let deleteFunction = (index) => {
+    arr.splice(index, 1)
+    let tmp = JSON.stringify(arr)
+    localStorage.setItem('values', tmp)
+    window.location.reload ()
+}

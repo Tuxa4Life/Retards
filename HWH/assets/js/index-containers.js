@@ -40,6 +40,7 @@ let loadRecentContainer = () => {
     document.querySelector('.p-up').addEventListener('click', changeRecentState)
 
     if (arr) {
+        let starBtn
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == 'null') {
                 null
@@ -63,8 +64,32 @@ let loadRecentContainer = () => {
                     </div>
                     <p class="type">${arr[i].category}</p>
                 `
+
+                starBtn = document.querySelectorAll('.fav-icon')
             }
         }
+        
+        starBtn = document.querySelectorAll('.fav-icon')
+
+        starBtn.forEach(item => item.addEventListener (
+            'click', function () {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i].id == item.getAttribute('data-fav-id')) {
+                        if (arr[i].favourite == false) {
+                            arr[i].favourite = true
+                            let tmp = JSON.stringify(arr)
+                            localStorage.setItem('values', tmp)
+                            window.location.reload ()
+                        } else {
+                            arr[i].favourite = false
+                            let tmp = JSON.stringify(arr)
+                            localStorage.setItem('values', tmp)
+                            window.location.reload ()
+                        }
+                    }
+                }
+            }
+        ))
     }
 }
 
