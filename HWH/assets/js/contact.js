@@ -19,9 +19,11 @@ let openContactMenu = () => {
     $body.appendChild(background)
     background.classList.add('cBackground')
     
+    
     menu = document.createElement('div') // creating menu
     background.appendChild(menu)
     menu.classList.add('contact-menu')
+    menu.classList.add('card')
     menu.innerHTML = `
         <p>
             Contact Me Here:  

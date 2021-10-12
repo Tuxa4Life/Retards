@@ -31,6 +31,7 @@ let openMenu = () => { // open function
     
     if (localStorage.getItem('loginState') == "true") {
         menu.classList.add('logginedMenu')
+        menu.classList.add('card')
         
         menu.innerHTML = `
             <div class="info">

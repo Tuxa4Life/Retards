@@ -34,6 +34,7 @@ let openTMENU = () => {
 
     Tmenu = document.createElement('div') // creating menu
     Tbackground.appendChild(Tmenu)
+    Tmenu.classList.add('card')
     Tmenu.classList.add('themeMenu')
 
     Tmenu.innerHTML = `
