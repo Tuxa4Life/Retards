@@ -54,7 +54,7 @@ let loadRecentContainer = () => {
                 post.classList.add('post')
                 post.innerHTML = `
                     <h2 class="header">${arr[i].header}</h2>
-                    <img class="post-img" src="${arr[i].url}">
+                    <img class="post-img" src="${arr[i].url}" alt="Error 404: Photo not found">
                     <p class="text">${arr[i].text}</p>
                     <div class="extra">
                         <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">

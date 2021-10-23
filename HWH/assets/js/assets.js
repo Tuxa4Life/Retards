@@ -67,7 +67,7 @@ let loadValues = () => {
                 post.innerHTML = `
                     <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="X">
                     <h2 class="header">${arr[i].header}</h2>
-                    <img class="post-img" src="${arr[i].url}">
+                    <img class="post-img" src="${arr[i].url}" alt="Error 404: Photo not found">
                     
                     <p class="text">${arr[i].text}</p>
                     <div class="extra">
