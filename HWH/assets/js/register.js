@@ -77,9 +77,16 @@ let validate = () => {
 let register = () => {
     validate () 
     if (valid == true) {
+        let UID = "U" + Math.floor(Math.random() * Date.now())
+        let loginValues = {
+            n: values.n,
+            e: values.e,
+            p: values.p,
+            id: UID
+        }
         localStorage.setItem('loginState', true)
 
-        let tmp = JSON.stringify(values)
+        let tmp = JSON.stringify(loginValues)
         localStorage.setItem('LS_values', tmp)
         window.location.href = "index.html"
     }

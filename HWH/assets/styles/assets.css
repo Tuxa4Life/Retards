@@ -188,14 +188,14 @@ main .post-place {
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 main .post-place .post {
   width: 300px;
-  min-height: 220px;
+  min-height: 300px;
   background: #2b2b2b;
   border: 1px #121212 solid;
   display: -webkit-box;
@@ -204,9 +204,6 @@ main .post-place .post {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -234,6 +231,7 @@ main .post-place .post .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -250,13 +248,16 @@ main .post-place .post .text {
 main .post-place .post .extra {
   height: 10%;
   width: 90%;
-  margin-top: 50px;
+  margin-top: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top: 1px #E0E0E0 solid;
   padding-top: 10px;
 }

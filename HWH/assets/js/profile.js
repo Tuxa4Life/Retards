@@ -36,6 +36,7 @@ let openMenu = () => { // open function
         menu.innerHTML = `
             <div class="info">
                 <h2>${ProfileValues.n}</h2>
+                <span>UID: ${ProfileValues.id}</span>
                 <p>${ProfileValues.e}</p>
                 <h6 class="logOutBtn">Log Out</h6>
             </div>

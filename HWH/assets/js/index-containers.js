@@ -32,10 +32,8 @@ let loadRecentContainer = () => {
     recentContainer.className = 'posts recent-posts'
 
     recentContainer.innerHTML = `
-        <div class="posts recent-posts">
-            <h1><img src="assets/icons/clock.svg" alt=""> Recent Posts <img class="p-up" src="assets/icons/chevron-up.svg" alt="+"></h1>
-            <div class="recent-posts-container"></div>
-        </div>
+        <h1><img src="assets/icons/clock.svg" alt=""> Recent Posts <img class="p-up" src="assets/icons/chevron-up.svg" alt="+"></h1>
+        <div class="recent-posts-container"></div>
     `
     document.querySelector('.p-up').addEventListener('click', changeRecentState)
 
@@ -113,10 +111,8 @@ let loadFavContainer = () => {
     favContainer.className = 'posts fav-posts'
 
     favContainer.innerHTML = `
-        <div class="posts fav-posts">
-            <h1><img src="assets/icons/star-filled.svg" alt=""> Favourite Posts <img class="fp-up" src="assets/icons/chevron-up.svg" alt="+"></h1>
-            <div class="favourite-posts-container"></div>
-        </div>
+        <h1><img src="assets/icons/star-filled.svg" alt=""> Favourite Posts <img class="fp-up" src="assets/icons/chevron-up.svg" alt="+"></h1>
+        <div class="favourite-posts-container"></div>
     `
 
     loadFavPosts ()

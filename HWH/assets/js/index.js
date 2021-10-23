@@ -18,6 +18,10 @@ let loadContents = () => {
         $main.appendChild(null_alert)
         null_alert.textContent = "There's nothing to show..."
     }
+
+    if (document.querySelector('.favourite-posts-container').children.length == 0) {
+        document.querySelector('.fav-posts').style.display = 'none'
+    }
 }
 
 window.addEventListener('load', loadContents)

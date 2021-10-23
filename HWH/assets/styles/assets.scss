@@ -145,15 +145,14 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         .post {
             width: 300px;
-            min-height: 220px;
+            min-height: 300px;
             background: $postBackground;
             border: 1px $bBackground solid;
             display: flex;
             align-items: center;
-            justify-content: center;
             flex-direction: column;
             border-radius: 5px;
             margin-top: 4vh;
@@ -171,6 +170,7 @@ main {
                 width: 80%;
                 height: 10%;
                 display: flex;
+                margin-top: 30px;
                 justify-content: center;
                 word-break: break-all;
                 text-align: left;
@@ -183,9 +183,10 @@ main {
             .extra {
                 height: 10%;
                 width: 90%;
-                margin-top: 50px;
+                margin-top: auto;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 border-top: 1px $tBackground solid;
                 padding-top: 10px;
                 p {

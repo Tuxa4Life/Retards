@@ -106,14 +106,13 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-direction: column;
+                flex-direction: column-reverse !important;
                 .post {
                     width: 300px;
-                    min-height: 200px;
+                    min-height:300px;
                     background: $postBackground;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
                     flex-direction: column;
                     border-radius: 5px;
                     margin-top: 4vh;
@@ -122,6 +121,7 @@ body {
                     .header {
                         width: 80%;
                         height: 10%;
+                        margin-top: 30px;
                         display: flex;
                         justify-content: center;
                         word-break: break-all;
@@ -135,8 +135,9 @@ body {
                     .extra {
                         height: 10%;
                         width: 90%;
-                        margin-top: 50px;
+                        margin-top: auto;
                         display: flex;
+                        align-items: center;
                         justify-content: space-between;
                         border-top: 1px $tBackground solid;
                         padding-top: 10px;
@@ -175,10 +176,10 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
+            flex-direction: column-reverse !important;
             .fav-post {
                 width: 300px;
-                min-height: 200px;
+                min-height: 300px;
                 background: $postBackground;
                 display: flex;
                 align-items: center;
@@ -191,6 +192,7 @@ body {
                 .header {
                     width: 80%;
                     height: 10%;
+                    margin-top: 30px;
                     display: flex;
                     justify-content: center;
                     word-break: break-all;
@@ -204,7 +206,7 @@ body {
                 .extra {
                     height: 10%;
                     width: 90%;
-                    margin-top: 50px;
+                    margin-top: auto;
                     display: flex;
                     justify-content: space-between;
                     border-top: 1px $tBackground solid;
