@@ -27,6 +27,7 @@ $cancelBtn.addEventListener('click', closeCM)
 // posting 
 const $headerInput = document.querySelector('.headerbox')
 const $textInput = document.querySelector('.textbox')
+const $imageInput = document.querySelector('.imagebox')
 const $postBtn = document.querySelector('.post-btn')
 const $place = document.querySelector('.post-place')
 const $selector = document.querySelector('.selector')
@@ -35,6 +36,7 @@ let values = {
     author: ProfileValues.n,
     header: '',
     text: '',
+    url: '',
     date: '',
     category: $selector.value,
     id: '',
@@ -65,6 +67,8 @@ let loadValues = () => {
                 post.innerHTML = `
                     <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="X">
                     <h2 class="header">${arr[i].header}</h2>
+                    <img class="post-img" src="${arr[i].url}">
+                    
                     <p class="text">${arr[i].text}</p>
                     <div class="extra">
                         <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
@@ -73,6 +77,7 @@ let loadValues = () => {
                     </div>
                     <p class="type">${arr[i].category}</p>
                 `
+
 
                 let deleteBtn = document.querySelectorAll('.delete-post-btn')
                 
@@ -128,6 +133,7 @@ let getValue = () => {
     values.header = $headerInput.value
     values.text = $textInput.value
     values.date = fullDate
+    values.url = $imageInput.value
 }
 
 $selector.addEventListener(

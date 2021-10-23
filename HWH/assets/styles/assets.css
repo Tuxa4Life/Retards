@@ -89,7 +89,7 @@ main .create-background {
 
 main .create-background .create-menu {
   width: 40%;
-  height: 60%;
+  height: 80%;
   background: #2F2F2F;
   position: relative;
   display: -webkit-box;
@@ -111,7 +111,8 @@ main .create-background .create-menu {
 
 @media (max-width: 660px) {
   main .create-background .create-menu {
-    width: 90%;
+    width: 95%;
+    height: 95%;
   }
 }
 
@@ -237,6 +238,12 @@ main .post-place .post .header {
           justify-content: center;
   word-break: break-all;
   text-align: left;
+}
+
+main .post-place .post .post-img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .post-place .post .text {

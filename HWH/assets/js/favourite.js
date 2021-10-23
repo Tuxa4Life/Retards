@@ -9,6 +9,7 @@ let loadFavPosts = () => {
             post.setAttribute('data-category', arr[i].category)
             post.innerHTML = `
                 <h2 class="header">${arr[i].header}</h2>
+                <img class="post-img" src="${arr[i].url}">
                 <p class="text">${arr[i].text}</p>
                 <div class="extra">
                     <img data-fav-id="${arr[i].id}" class="fav-icon" src="assets/icons/star-filled.svg">

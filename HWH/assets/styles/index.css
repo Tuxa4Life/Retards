@@ -199,6 +199,12 @@ body main .posts .recent-posts-container .post .header {
   text-align: left;
 }
 
+body main .posts .recent-posts-container .post .post-img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 body main .posts .recent-posts-container .post .text {
   width: 80%;
   height: 70%;
@@ -302,6 +308,12 @@ body .fav-posts .favourite-posts-container .fav-post .header {
           justify-content: center;
   word-break: break-all;
   text-align: left;
+}
+
+body .fav-posts .favourite-posts-container .fav-post .post-img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .fav-posts .favourite-posts-container .fav-post .text {
