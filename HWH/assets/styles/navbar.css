@@ -1,9 +1,25 @@
-a {
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #383838;
+  margin-bottom: 50px;
   color: #E0E0E0;
+}
+
+body a {
   text-decoration: none;
 }
 
-img {
+body p, body a, body h1, body h2, body i {
+  color: #E0E0E0;
+}
+
+body img {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -11,19 +27,19 @@ img {
           user-select: none;
 }
 
-ul {
+body ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-h1 {
+body h1 {
   margin: 0;
   padding: 0;
 }
 
-html {
-  overflow-x: hidden;
+body i {
+  cursor: pointer;
 }
 
 body {

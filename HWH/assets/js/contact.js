@@ -4,11 +4,7 @@ const $contactBtn2 = document.querySelector('.contact-btn2')
 let CS = false
 let changeCS = () => {
     CS = !CS
-    if (CS == true) {
-        openContactMenu ()
-    } else {
-        closeContactMenu ()
-    }
+    CS == true ? openContactMenu () : closeContactMenu ()
 }
 
 $contactBtn.addEventListener('click', changeCS)

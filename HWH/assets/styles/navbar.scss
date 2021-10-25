@@ -8,29 +8,40 @@ $sBackground: #2E2E2E; // sidebar background
 
 $svgFilter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
 
-a {
-    color: $tBackground;
-    text-decoration: none;
-}
-
-img {
-    cursor: pointer;
-    user-select: none;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-h1 {
-    margin: 0;
-    padding: 0;
-}
 
 html {
     overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: $pBackground;
+    margin-bottom: 50px;
+    color: $tBackground;
+    a {
+        text-decoration: none;
+    }
+    p, a, h1, h2, i {
+        color: $tBackground;
+    }
+    img {
+        cursor: pointer;
+        user-select: none;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+    i {
+        cursor: pointer;
+    }
 }
 
 body {

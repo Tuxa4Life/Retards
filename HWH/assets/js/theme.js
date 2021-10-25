@@ -5,11 +5,7 @@ let tMenuState = false
 
 let tMenuStateChange = () => {
     tMenuState = !tMenuState
-    if (tMenuState == true) {
-        openTMENU ()
-    } else {
-        closeTMENU ()
-    }
+    tMenuState == true ? openTMENU () : closeTMENU ()
 }
 
 let Tbackground 
@@ -19,11 +15,7 @@ let tmpSwitch = true
 
 let toggleTheme = () => {
     themeState = !themeState
-    if (themeState == true) {
-        $body.classList.remove('light')
-    } else {
-        $body.classList.add('light')
-    }
+    themeState == true ? $body.classList.remove('light') : $body.classList.add('light') 
 }
 let logo = document.querySelector('.logo-img')
 

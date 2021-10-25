@@ -51,15 +51,9 @@ let passwordFilter = /^[A-Za-z]\w{7,20}$/
 let validate = () => {
     getValue ()
 
-    if (values.e.match(emailFilter)) {
-        $ei.style.borderBottom = '1px #121212 solid'
-    }
-    if (values.p.match(passwordFilter)) {
-        $pi.style.borderBottom = '1px #121212 solid'
-    }
-    if (values.p == values.rp) {
-        $rpi.style.borderBottom = '1px #121212 solid'
-    }
+    if (values.e.match(emailFilter)) {$ei.style.borderBottom = '1px #121212 solid'}
+    if (values.p.match(passwordFilter)) {$pi.style.borderBottom = '1px #121212 solid'}
+    if (values.p == values.rp) {$rpi.style.borderBottom = '1px #121212 solid'}
 
     if (values.e.match(emailFilter) && values.p.match(passwordFilter) && values.p == values.rp) {
         valid = true

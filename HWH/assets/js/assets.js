@@ -36,7 +36,7 @@ let values = {
     author: ProfileValues.n,
     header: '',
     text: '',
-    url: '',
+    url: 'ukn',
     date: '',
     category: $selector.value,
     id: '',
@@ -53,40 +53,49 @@ let loadValues = () => {
             if (arr[i] == 'null') {
                 null
             } else {
-                if (arr[i].favourite == true) {
-                    arr[i].star_pic = 'assets/icons/star-filled.svg'
-                } else {
-                    arr[i].star_pic = 'assets/icons/star-outline.svg'
-                }
+                arr[i].favourite == true ? arr[i].star_pic = 'assets/icons/star-filled.svg'
+                : arr[i].star_pic = 'assets/icons/star-outline.svg'
                 
                 let post = document.createElement('div')
                 $place.appendChild(post)
                 post.classList.add('post')
                 post.setAttribute('data-id', arr[i].id)
                 post.setAttribute('data-category', arr[i].category)
-                post.innerHTML = `
-                    <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="X">
-                    <h2 class="header">${arr[i].header}</h2>
-                    <img class="post-img" src="${arr[i].url}" alt="Error 404: Photo not found">
-                    
-                    <p class="text">${arr[i].text}</p>
-                    <div class="extra">
-                        <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
-                        <p>${arr[i].date}</p>
-                        <p>${arr[i].author}</p>
-                    </div>
-                    <p class="type">${arr[i].category}</p>
-                `
-
+                if (arr[i].url == '') {
+                    post.innerHTML = `
+                        <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="X">
+                        <h2 class="header">${arr[i].header}</h2>
+                        
+                        <p class="text">${arr[i].text}</p>
+                        <div class="extra">
+                            <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
+                            <p>${arr[i].date}</p>
+                            <p>${arr[i].author}</p>
+                        </div>
+                        <p class="type">${arr[i].category}</p>
+                    `
+                } else {
+                    post.innerHTML = `
+                        <img data-delete="${arr[i].id}" class="delete-post-btn" src="assets/icons/trash.svg" alt="X">
+                        <h2 class="header">${arr[i].header}</h2>
+                        <img class="post-img" src="${arr[i].url}" alt="Error 404: Photo not found">
+                        
+                        <p class="text">${arr[i].text}</p>
+                        <div class="extra">
+                            <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
+                            <p>${arr[i].date}</p>
+                            <p>${arr[i].author}</p>
+                        </div>
+                        <p class="type">${arr[i].category}</p>
+                    `
+                }
 
                 let deleteBtn = document.querySelectorAll('.delete-post-btn')
                 
                 deleteBtn.forEach(item => item.addEventListener (
                     'click', function () {
                         for (let i = 0; i < arr.length; i++) {
-                            if (arr[i].id == item.getAttribute('data-delete')) {
-                                deleteFunction (i)
-                            }
+                            if (arr[i].id == item.getAttribute('data-delete')) {deleteFunction (i)}
                         }
                     }
                 ))

@@ -1,27 +1,3 @@
-a {
-  color: #E0E0E0;
-  text-decoration: none;
-}
-
-i {
-  cursor: pointer;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  overflow-x: hidden;
-}
-
 body {
   margin-bottom: 50px;
 }
@@ -143,11 +119,7 @@ body main .posts h1 img {
   margin-left: 15px;
 }
 
-body main .posts h1 .p-down {
-  display: none;
-}
-
-body main .posts .recent-posts-container {
+body main .posts .recent-posts-container, body main .posts .favourite-posts-container {
   width: 100%;
   min-height: 5vh;
   display: -webkit-box;
@@ -165,7 +137,7 @@ body main .posts .recent-posts-container {
           flex-direction: column-reverse !important;
 }
 
-body main .posts .recent-posts-container .post {
+body main .posts .recent-posts-container .post, body main .posts .recent-posts-container .fav-post, body main .posts .favourite-posts-container .post, body main .posts .favourite-posts-container .fav-post {
   width: 300px;
   min-height: 300px;
   background: #2b2b2b;
@@ -185,7 +157,7 @@ body main .posts .recent-posts-container .post {
   position: relative;
 }
 
-body main .posts .recent-posts-container .post .header {
+body main .posts .recent-posts-container .post .header, body main .posts .recent-posts-container .fav-post .header, body main .posts .favourite-posts-container .post .header, body main .posts .favourite-posts-container .fav-post .header {
   width: 80%;
   height: 10%;
   margin-top: 30px;
@@ -199,19 +171,19 @@ body main .posts .recent-posts-container .post .header {
   text-align: left;
 }
 
-body main .posts .recent-posts-container .post .post-img {
+body main .posts .recent-posts-container .post .post-img, body main .posts .recent-posts-container .fav-post .post-img, body main .posts .favourite-posts-container .post .post-img, body main .posts .favourite-posts-container .fav-post .post-img {
   width: 90%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body main .posts .recent-posts-container .post .text {
+body main .posts .recent-posts-container .post .text, body main .posts .recent-posts-container .fav-post .text, body main .posts .favourite-posts-container .post .text, body main .posts .favourite-posts-container .fav-post .text {
   width: 80%;
   height: 70%;
   word-break: break-all;
 }
 
-body main .posts .recent-posts-container .post .extra {
+body main .posts .recent-posts-container .post .extra, body main .posts .recent-posts-container .fav-post .extra, body main .posts .favourite-posts-container .post .extra, body main .posts .favourite-posts-container .fav-post .extra {
   height: 10%;
   width: 90%;
   margin-top: auto;
@@ -228,18 +200,18 @@ body main .posts .recent-posts-container .post .extra {
   padding-top: 10px;
 }
 
-body main .posts .recent-posts-container .post .extra p {
+body main .posts .recent-posts-container .post .extra p, body main .posts .recent-posts-container .fav-post .extra p, body main .posts .favourite-posts-container .post .extra p, body main .posts .favourite-posts-container .fav-post .extra p {
   font-size: 12px;
 }
 
-body main .posts .recent-posts-container .post .extra .fav-icon {
+body main .posts .recent-posts-container .post .extra .fav-icon, body main .posts .recent-posts-container .fav-post .extra .fav-icon, body main .posts .favourite-posts-container .post .extra .fav-icon, body main .posts .favourite-posts-container .fav-post .extra .fav-icon {
   width: 20px;
   height: 20px;
   -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
           filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
 }
 
-body main .posts .recent-posts-container .post .type {
+body main .posts .recent-posts-container .post .type, body main .posts .recent-posts-container .fav-post .type, body main .posts .favourite-posts-container .post .type, body main .posts .favourite-posts-container .fav-post .type {
   font-size: 13px;
   position: absolute;
   top: 0px;
@@ -247,115 +219,7 @@ body main .posts .recent-posts-container .post .type {
   font-weight: bold;
 }
 
-body main .posts .recent-posts-container .post:first-child {
-  margin-top: 7vh;
-}
-
-body .fav-posts h1 .fp-down {
-  display: none;
-}
-
-body .fav-posts .favourite-posts-container {
-  width: 100%;
-  min-height: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: reverse !important;
-      -ms-flex-direction: column-reverse !important;
-          flex-direction: column-reverse !important;
-}
-
-body .fav-posts .favourite-posts-container .fav-post {
-  width: 300px;
-  min-height: 300px;
-  background: #2b2b2b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 5px;
-  margin-top: 4vh;
-  border: 1px #121212 solid;
-  position: relative;
-}
-
-body .fav-posts .favourite-posts-container .fav-post .header {
-  width: 80%;
-  height: 10%;
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  word-break: break-all;
-  text-align: left;
-}
-
-body .fav-posts .favourite-posts-container .fav-post .post-img {
-  width: 90%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-body .fav-posts .favourite-posts-container .fav-post .text {
-  width: 80%;
-  height: 70%;
-  word-break: break-all;
-}
-
-body .fav-posts .favourite-posts-container .fav-post .extra {
-  height: 10%;
-  width: 90%;
-  margin-top: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 1px #E0E0E0 solid;
-  padding-top: 10px;
-}
-
-body .fav-posts .favourite-posts-container .fav-post .extra p {
-  font-size: 12px;
-}
-
-body .fav-posts .favourite-posts-container .fav-post .extra .fav-icon {
-  width: 20px;
-  height: 20px;
-  -webkit-filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
-          filter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
-}
-
-body .fav-posts .favourite-posts-container .fav-post .type {
-  font-size: 13px;
-  position: absolute;
-  top: 0px;
-  left: 5px;
-  font-weight: bold;
-}
-
-body .fav-posts .favourite-posts-container .post:first-child {
+body main .posts .recent-posts-container .post:first-child, body main .posts .favourite-posts-container .post:first-child {
   margin-top: 7vh;
 }
 

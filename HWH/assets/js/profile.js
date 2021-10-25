@@ -6,11 +6,7 @@ let pMenuState = false
 
 let profileStateChange = () => { // opening closing menu
     pMenuState = !pMenuState
-    if (pMenuState == true) {
-        openMenu ()
-    } else {
-        closeMenu ()
-    }
+    pMenuState == true ? openMenu () : closeMenu ()
 }
 
 let background

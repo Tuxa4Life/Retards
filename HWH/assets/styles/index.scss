@@ -9,30 +9,6 @@ $postBackground: #2b2b2b;
 
 $svgFilter: invert(100%) sepia(0%) saturate(7448%) hue-rotate(59deg) brightness(88%) contrast(99%);
 
-a {
-    color: $tBackground;
-    text-decoration: none;
-}
-
-i {
-    cursor: pointer;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-h1 {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    overflow-x: hidden;
-}
-
 body {
     margin-bottom: 50px;
     main {
@@ -96,18 +72,15 @@ body {
                     filter: $svgFilter;
                     margin-left: 15px;
                 }
-                .p-down {
-                    display: none;
-                }
             }
-            .recent-posts-container {
+            .recent-posts-container, .favourite-posts-container {
                 width: 100%;
                 min-height: 5vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column-reverse !important;
-                .post {
+                .post, .fav-post {
                     width: 300px;
                     min-height:300px;
                     background: $postBackground;
@@ -165,79 +138,6 @@ body {
                 .post:first-child {
                     margin-top: 7vh;
                 }
-            }
-        }
-    }
-    .fav-posts {
-        h1 {
-            .fp-down {
-                display: none;
-            }
-        }
-        .favourite-posts-container {
-            width: 100%;
-            min-height: 5vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column-reverse !important;
-            .fav-post {
-                width: 300px;
-                min-height: 300px;
-                background: $postBackground;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                border-radius: 5px;
-                margin-top: 4vh;
-                border: 1px $bBackground solid;
-                position: relative;
-                .header {
-                    width: 80%;
-                    height: 10%;
-                    margin-top: 30px;
-                    display: flex;
-                    justify-content: center;
-                    word-break: break-all;
-                    text-align: left;
-                }
-                .post-img {
-                    width: 90%;
-                    object-fit: cover;
-                }
-                .text {
-                    width: 80%;
-                    height: 70%;
-                    word-break: break-all;
-                }
-                .extra {
-                    height: 10%;
-                    width: 90%;
-                    margin-top: auto;
-                    display: flex;
-                    justify-content: space-between;
-                    border-top: 1px $tBackground solid;
-                    padding-top: 10px;
-                    p {
-                        font-size: 12px;
-                    }
-                    .fav-icon {
-                        width: 20px;
-                        height: 20px;
-                        filter: $svgFilter;
-                    }
-                }
-                .type {
-                    font-size: 13px;
-                    position: absolute;
-                    top: 0px;
-                    left: 5px;
-                    font-weight: bold;
-                }
-            }
-            .post:first-child {
-                margin-top: 7vh;
             }
         }
     }

@@ -43,26 +43,37 @@ let loadRecentContainer = () => {
             if (arr[i] == 'null') {
                 null
             } else {
-                if (arr[i].favourite == true) {
-                    arr[i].star_pic = 'assets/icons/star-filled.svg'
-                } else {
-                    arr[i].star_pic = 'assets/icons/star-outline.svg'
-                }
+                arr[i].favourite == true ? arr[i].star_pic = 'assets/icons/star-filled.svg' : arr[i].star_pic = 'assets/icons/star-outline.svg'
                 
                 let post = document.createElement('div')
                 document.querySelector('.recent-posts-container').appendChild(post)
                 post.classList.add('post')
-                post.innerHTML = `
-                    <h2 class="header">${arr[i].header}</h2>
-                    <img class="post-img" src="${arr[i].url}" alt="Error 404: Photo not found">
-                    <p class="text">${arr[i].text}</p>
-                    <div class="extra">
-                        <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
-                        <p>${arr[i].date}</p>
-                        <p>${arr[i].author}</p>
-                    </div>
-                    <p class="type">${arr[i].category}</p>
-                `
+                if (arr[i].url == '') {
+                    post.innerHTML = `
+                        <h2 class="header">${arr[i].header}</h2>
+                        
+                        <p class="text">${arr[i].text}</p>
+                        <div class="extra">
+                            <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
+                            <p>${arr[i].date}</p>
+                            <p>${arr[i].author}</p>
+                        </div>
+                        <p class="type">${arr[i].category}</p>
+                    `
+                } else {
+                    post.innerHTML = `
+                        <h2 class="header">${arr[i].header}</h2>
+                        <img class="post-img" src="${arr[i].url}" alt="Error 404: Photo not found">
+                        
+                        <p class="text">${arr[i].text}</p>
+                        <div class="extra">
+                            <img data-fav-id="${arr[i].id}" class="fav-icon" src="${arr[i].star_pic}">
+                            <p>${arr[i].date}</p>
+                            <p>${arr[i].author}</p>
+                        </div>
+                        <p class="type">${arr[i].category}</p>
+                    `
+                }
 
                 starBtn = document.querySelectorAll('.fav-icon')
             }

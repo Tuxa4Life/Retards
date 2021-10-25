@@ -3,11 +3,7 @@ let $langBtn2 = document.querySelector ('.language-btn2')
 let LMenuState = false
 let LMenuStateChanger = () => {
     LMenuState = !LMenuState
-    if (LMenuState == true) {
-        openLMENU ()
-    } else {
-        document.querySelector('.LBackground').style.display = 'none'
-    }
+    LMenuState == true ? openLMENU () : document.querySelector('.LBackground').style.display = 'none'
 }
 
 
