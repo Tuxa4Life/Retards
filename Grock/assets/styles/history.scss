@@ -1,0 +1,21 @@
+.container {
+    width: 96%;
+    margin-left: 4%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .asset {
+        width: 90%;
+        min-height: 70px;
+        border: 1px green solid;
+        background-color: rgba(1, 104, 1, 0.137);
+        border-radius: 15px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+}

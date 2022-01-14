@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(222, 250, 179);
+}
+.container {
+    width: 96%;
+    margin-left: 4%;
+}
+
+section:first-child {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+
+.img-wrapper {
+    width: 40%;
+    height: 90vh;
+    margin: 10px 0 0 10px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.brief-details {
+    width: 60%;
+    height: 90vh;
+}
+
+.brief-details h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.brief-details ul,
+p {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.brief-details .images {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.brief-details .images img {
+    width: 20%;
+    height: 40vh;
+    object-fit: cover;
+    margin-top: 20%;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.container section button {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    width: 75px;
+    height: 35px;
+    background-color: rgb(19, 202, 19);
+    border-radius: 12px;
+    transition: all .5s;
+}
+.container section button:hover {
+    background-color: rgb(19, 255, 19);
+    cursor: pointer;
+}
+
+.rBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+  
+.reserveMenu {
+    width: 350px;
+    height: 270px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #e1eed6;
+    border: 2px #06c710 solid;
+    border-radius: 10px;
+}
+.reserveMenu .button-wrapper {
+    width: 95%;
+    display: flex;
+    justify-content: right;
+}
+.reserveMenu .button-wrapper button {
+    background-color: greenyellow;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all .5s;
+}
+.reserveMenu .button-wrapper button:hover {
+    background-color: rgb(151, 211, 61);
+    cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

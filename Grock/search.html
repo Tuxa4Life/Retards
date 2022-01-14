@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/navigation.css">
+    <link rel="stylesheet" href="assets/styles/search.css">
+    <title>Travel More</title>
+</head>
+<body>
+    <div class="navigation">
+        <div class="main-list">
+            <div class="menu-btn">
+                <img src="assets/icons/bars.svg" alt="">
+            </div>
+    
+            <ul>
+                <li id="home">
+                    <img src="assets/icons/home.svg" alt="">
+                    <p class="extended-text">Home</p>
+                </li>
+                <li id="search">
+                    <img src="assets/icons/search.svg" alt="">
+                    <p class="extended-text">Search</p>
+                </li>
+                <li id="profile">
+                    <img src="assets/icons/user.svg" alt="">
+                    <p class="extended-text">Profile</p>
+                </li>
+                <li id="history">
+                    <img src="assets/icons/history.svg" alt="">
+                    <p class="extended-text">History</p>
+                </li>
+            </ul>
+        </div>
+        <img class="info-btn" src="assets/icons/info.svg" alt="">
+    </div>
+
+    <div class="container">
+
+    </div>
+
+    <div class="filter">
+        <h1>Filter</h1>
+        <div class="filters">
+            <select id="regionSelector">
+                <option selected value="null">Choose a region</option>
+                <option value="Batumi">Batumi</option>
+                <option value="Tbilisi">Tbilisi</option>
+                <option value="Svaneti">Svaneti</option>
+                <option value="Kakheti">Kakheti</option>
+                <option value="Ureki">Ureki</option>
+                <option value="Tskibuli">Tskibuli</option>
+                <option value="Ambrolauri">Ambrolauri</option>
+                <option value="Sokhumi">Sokhumi</option>
+                <option value="Mtskheta">Mtskheta</option>
+                <option value="Gurjaani">Gurjaani</option>
+                <option value="Kutaisi">Kutaisi</option>
+            </select><br>
+
+            <label for="rooms">Min. Rooms:</label>
+            <input name="rooms" type="number" value="1" min="1" max="6"><br>
+
+            <label for="stars">Min. Stars:</label>
+            <input name="stars" type="number" value="1" min="1" max="5"><br>
+
+            <label for="wifi">Wifi</label>
+            <input name="wifi" type="checkbox"><br>
+
+            <label for="parking">Parking</label>
+            <input name="parking" type="checkbox"><br>
+
+            <label for="jacuzzi">Jacuzzi</label>
+            <input name="jacuzzi" type="checkbox"><br>
+
+            <label for="free-meal">Free Meal</label>
+            <input name="free-meal" type="checkbox"><br>
+
+            <button class="filter-btn">Filter</button>
+            <button class="reset-btn">Reset</button>
+        </div>
+    </div>
+
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/links.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/user_info.js"></script>
+    <script src="assets/js/filter.js"></script>
+</body>
+</html>

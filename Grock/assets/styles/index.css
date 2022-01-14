@@ -1,0 +1,172 @@
+.container {
+  width: 96%;
+  min-height: 200vh;
+  margin-left: 4%;
+  padding-bottom: 50px;
+}
+
+.container .image-background {
+  width: 100%;
+  height: 60vh;
+  background-image: url("../images/home-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-attachment: fixed;
+}
+
+.container .image-background .logo {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .carousel-one {
+  width: 100%;
+  height: 50vh;
+  margin-top: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .regions {
+  width: 100%;
+  height: 60vh;
+  margin-top: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .regions .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50vh;
+  margin-top: 5vh;
+}
+
+.container .regions .cards .card {
+  width: 15vw;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  height: 50vh;
+  border: 1px black solid;
+  margin: 10px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.container .regions .cards .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.container .regions .cards .card .desc {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  border-radius: 10px;
+}
+
+.container .regions .cards .card .desc h3 {
+  width: 90%;
+  margin-left: 5%;
+  border-bottom: 1px white solid;
+  padding: 0 0 5px 0;
+  text-align: right;
+}
+
+.container .regions .cards .card:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.last-Info-About-Tourism-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 40vh;
+}
+
+.last-Info-About-Tourism {
+  border: 2px solid green;
+  border-radius: 50px;
+  background-color: #3cb831;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  height: auto;
+}
+
+.last-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+}
+/*# sourceMappingURL=index.css.map */

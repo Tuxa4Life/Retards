@@ -1,0 +1,36 @@
+.container {
+  width: 96%;
+  margin-left: 4%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .asset {
+  width: 90%;
+  min-height: 70px;
+  border: 1px green solid;
+  background-color: rgba(1, 104, 1, 0.137);
+  border-radius: 15px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=history.css.map */
