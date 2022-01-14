@@ -1,0 +1,101 @@
+.container {
+    width: 76%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4%;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+}
+.card {
+    width: 25%;
+    height: 70vh;
+    border: 1px black solid;
+    position: relative;
+    border-radius: 15px;
+    margin: 20px;
+    cursor: pointer;
+    img {
+        width: 100%;
+        border-radius: 15px;
+        height: 100%;
+        object-fit: cover;
+    }
+    .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        border-radius: 15px;
+        color: white;
+        background: rgba(0, 0, 0, 0.35);
+        div {
+            width: 90%;
+        }
+        .top-part {
+            border-bottom: 1px white solid;
+            padding: 0;
+            margin: 5px 0 0 0;
+            h2 {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .bottom-part {
+            border-top: 1px white solid;
+        }
+    }
+}
+.filter {
+    height: 100vh;
+    position: fixed;
+    width: 20%;
+    top: 0;
+    background: rgb(133, 219, 3);
+    right: 0;
+    border-left: 2px rgb(59, 185, 0) solid;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .filters {
+        width: 90%;
+        label {
+            font-size: 17px;
+        }
+        input, select {
+            margin-bottom: 10px;
+            background: rgb(199, 255, 116);
+            border: 1px green solid;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+        input[type="number"] {
+            width: 50px;
+        }
+        button {
+            margin-top: 20px;
+            background: rgb(50, 182, 50);
+            border: 1px rgb(104, 241, 139) solid;
+            padding: 5px;
+            transition: all .5s;
+            font-size: 18px;
+            width: 75px;
+            height: 40px;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            margin-left: 35%;
+        }
+        button:hover {
+            cursor: pointer;
+            background: rgb(23, 112, 23);
+        }
+    }
+}

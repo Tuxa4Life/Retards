@@ -1,0 +1,142 @@
+.container {
+  width: 76%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 4%;
+  margin-top: 10vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card {
+  width: 25%;
+  height: 70vh;
+  border: 1px black solid;
+  position: relative;
+  border-radius: 15px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  color: white;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.card .details div {
+  width: 90%;
+}
+
+.card .details .top-part {
+  border-bottom: 1px white solid;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.card .details .top-part h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.card .details .bottom-part {
+  border-top: 1px white solid;
+}
+
+.filter {
+  height: 100vh;
+  position: fixed;
+  width: 20%;
+  top: 0;
+  background: #85db03;
+  right: 0;
+  border-left: 2px #3bb900 solid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filter .filters {
+  width: 90%;
+}
+
+.filter .filters label {
+  font-size: 17px;
+}
+
+.filter .filters input, .filter .filters select {
+  margin-bottom: 10px;
+  background: #c7ff74;
+  border: 1px green solid;
+  border-radius: 5px;
+}
+
+.filter .filters input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.filter .filters input[type="number"] {
+  width: 50px;
+}
+
+.filter .filters button {
+  margin-top: 20px;
+  background: #32b632;
+  border: 1px #68f18b solid;
+  padding: 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  font-size: 18px;
+  width: 75px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 35%;
+}
+
+.filter .filters button:hover {
+  cursor: pointer;
+  background: #177017;
+}
+/*# sourceMappingURL=search.css.map */

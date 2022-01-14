@@ -1,0 +1,198 @@
+$svgFilter: invert(19%) sepia(29%) saturate(2418%) hue-rotate(82deg) brightness(94%) contrast(99%);
+$svgHover: invert(36%) sepia(12%) saturate(3105%) hue-rotate(71deg) brightness(89%) contrast(94%);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+body {
+    .navigation {
+        z-index: 3;
+        height: 100vh;
+        width: 4%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(41, 192, 41);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        .main-list {
+            width: 100%;
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .menu-btn {
+                width: 50px;
+                height: 7vh;
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                margin: 10px 0;
+                padding-bottom: 3px;
+                border-bottom: 1px #074705 solid;
+                img {
+                    width: 40px;
+                    filter: $svgFilter;
+                    margin-right: 10%;
+                    transition: all .5s;
+                }
+                img:hover {
+                    cursor: pointer;
+                    filter: $svgHover;
+                }
+            }
+    
+            ul {
+                width: 100%;
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                margin-top: 3vh;
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 10px 0;
+                    cursor: pointer;
+                    .extended-text {
+                        opacity: 0;
+                        transition: 0.5s;
+                        display: none;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 28px;
+                        margin-left: 7px;
+                    }
+                }
+                li img {
+                    width: 40px;
+                    filter: $svgFilter;
+                    transition: all .5s;
+                }
+                li img:hover {
+                    filter: $svgHover;
+                }
+            }
+        }
+        .info-btn {
+            width: 40px;
+            filter: $svgFilter;
+            margin-bottom: 10px;
+        }
+        .info-btn:hover {
+            transition: .5s;
+            filter: $svgHover;
+            cursor: pointer;
+        }
+    }
+}
+
+.expanded {
+    animation: navGrow .5s ease-in both;
+}
+
+.shrinked {
+    animation: navShrink .5s ease-in both;
+}
+
+@keyframes navGrow {
+    0% {
+        width: 4%;
+    }
+    100% {
+        width: 15%;
+    }
+}
+
+@keyframes navShrink {
+    0% {
+        width: 15%;
+    }
+    100% {
+        width: 4%;
+    }
+}
+
+
+
+
+
+// profile
+.pBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    background: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.profileMenu {
+    width: 350px;
+    height: 270px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #e1eed6;
+    border: 2px #06c710 solid;
+    border-radius: 10px;
+}
+  /* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #dfffd1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(5, 134, 11); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(18, 102, 1); 
+}
