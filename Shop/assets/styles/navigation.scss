@@ -1,0 +1,96 @@
+$primaryColor: #f19c1c;
+$secondaryColor: #D7CCC2;
+
+img {
+    filter: invert(86%) sepia(8%) saturate(329%) hue-rotate(347deg) brightness(98%) contrast(85%);;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: $secondaryColor;
+    padding: 0;
+    margin: 0;
+    nav {
+        height: 100vh;
+        position: fixed;
+        background-color: $primaryColor;
+        width: 4%;
+        transition: all .5s;
+        .menubtn-holder {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10%; // navigation height 10%
+            border-bottom: 1px solid $secondaryColor;
+            img {
+                width: 45px;
+            }
+        }
+        .links {
+            width: 100%;
+            height: 50%; // navigation height 60% (added margin)
+            margin: 10% 0 0 0; // this margin
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: contain;
+                }
+                span {
+                    display: none;
+                    margin-top: 5px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .opened {
+        animation: openNav .5s both;
+        .menubtn-holder {
+            justify-content: right;
+            img {
+                margin-right: 7px;
+            }
+        }
+        .links {
+            flex-direction: row;
+            flex-wrap: wrap;     
+            height: 30%;
+            div {
+                width: 80px;
+                height: 80px;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+    .closed {
+        animation: closeNav .5s both;
+        .menubtn-holder {
+            justify-content: center;
+            img {
+                margin-right: 0;
+            }
+        }
+        .links {
+            div {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes openNav {0% {width: 4%;} 100% {width: 20%;}}
+@keyframes closeNav {0% {width: 20%;} 100% {width: 4%;}}

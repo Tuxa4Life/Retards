@@ -1,0 +1,177 @@
+img {
+  -webkit-filter: invert(86%) sepia(8%) saturate(329%) hue-rotate(347deg) brightness(98%) contrast(85%);
+          filter: invert(86%) sepia(8%) saturate(329%) hue-rotate(347deg) brightness(98%) contrast(85%);
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  color: #D7CCC2;
+  padding: 0;
+  margin: 0;
+}
+
+body nav {
+  height: 100vh;
+  position: fixed;
+  background-color: #f19c1c;
+  width: 4%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body nav .menubtn-holder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10%;
+  border-bottom: 1px solid #D7CCC2;
+}
+
+body nav .menubtn-holder img {
+  width: 45px;
+}
+
+body nav .links {
+  width: 100%;
+  height: 50%;
+  margin: 10% 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body nav .links div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .links div img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body nav .links div span {
+  display: none;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+body .opened {
+  -webkit-animation: openNav .5s both;
+          animation: openNav .5s both;
+}
+
+body .opened .menubtn-holder {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+body .opened .menubtn-holder img {
+  margin-right: 7px;
+}
+
+body .opened .links {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 30%;
+}
+
+body .opened .links div {
+  width: 80px;
+  height: 80px;
+}
+
+body .opened .links div span {
+  display: block;
+}
+
+body .closed {
+  -webkit-animation: closeNav .5s both;
+          animation: closeNav .5s both;
+}
+
+body .closed .menubtn-holder {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .closed .menubtn-holder img {
+  margin-right: 0;
+}
+
+body .closed .links div span {
+  display: none;
+}
+
+@-webkit-keyframes openNav {
+  0% {
+    width: 4%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes openNav {
+  0% {
+    width: 4%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@-webkit-keyframes closeNav {
+  0% {
+    width: 20%;
+  }
+  100% {
+    width: 4%;
+  }
+}
+
+@keyframes closeNav {
+  0% {
+    width: 20%;
+  }
+  100% {
+    width: 4%;
+  }
+}
+/*# sourceMappingURL=navigation.css.map */
